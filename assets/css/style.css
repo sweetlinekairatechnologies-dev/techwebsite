@@ -365,7 +365,7 @@ body { padding-top: 72px; }
     position: relative; z-index: 1; align-items: start;
 }
 .ct-footer-heading {
-    font-size: clamp(2rem,3.5vw,3.2rem); font-weight: 800;
+    font-size: clamp(1.6rem,2.8vw,3.2rem); font-weight: 800;
     line-height: 1.1; letter-spacing: -0.03em;
     color: #ffffff; margin-bottom: 32px;
 }
