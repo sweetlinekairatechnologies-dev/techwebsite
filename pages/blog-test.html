@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Additional debugging styles */
+        .debug-info {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+        
+        /* Ensure content is visible */
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Make sure gallery container is visible */
+        #gallery-container {
+            min-height: 200px;
+            border: 1px solid rgba(108, 255, 108, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .filter-container {
+            min-height: 50px;
+            border: 1px solid rgba(108, 255, 108, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="../visibility-fix.css">
+
+<body>
+    <div class="debug-info">
+        <div>Debug Info:</div>
+        <div id="debug-status">Loading...</div>
+    </div>
+
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- HERO/BREADCRUMB SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Our Blog</h1>
+            <div class="hero-breadcrumb">
+                <span>Home</span>
+                <i class="bi bi-chevron-right"></i>
+                <span>Blog</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-4">
+        <!-- Filters -->
+        <div class="filter-container" id="filter-container">
+            <p style="color: #6cff6c;">Filter buttons will appear here...</p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4" id="gallery-container">
+            <p style="color: #6cff6c;">Blog cards will appear here...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/blog.js"></script>
+    <script src="../assets/js/include.js"></script>
+    
+    <script>
+        // Additional debugging
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugStatus = document.getElementById('debug-status');
+            
+            setTimeout(() => {
+                const container = document.getElementById('gallery-container');
+                const filterContainer = document.getElementById('filter-container');
+                const hasData = typeof galleryData !== 'undefined';
+                const cardCount = container ? container.children.length : 0;
+                const filterCount = filterContainer ? filterContainer.children.length : 0;
+                
+                debugStatus.innerHTML = `
+                    Data loaded: ${hasData}<br>
+                    Cards: ${cardCount}<br>
+                    Filters: ${filterCount}<br>
+                    Container: ${!!container}<br>
+                    Filter Container: ${!!filterContainer}
+                `;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

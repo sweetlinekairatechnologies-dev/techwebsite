@@ -1,0 +1,1 @@
+b'setInterval(() => { nextTesti(); }, 5000);\r\n          </script>\r\n          </div><!-- /col-lg-8 -->\r\n        </div><!-- /row -->\r\n      </div><!-- /container -->\r\n  </section>\r\n\r\n\r\n  <!-- faq start -->\r\n\r\n  <section class="faq-section">\r\n    <div class="container">\r\n      <div class="row align-items'
