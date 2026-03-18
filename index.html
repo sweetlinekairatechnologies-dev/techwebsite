@@ -1173,6 +1173,46 @@ style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,0.6);borde
 
 
 
+  <!-- Floating Pabbly Affiliate Link -->
+  <a href="pabbly.html" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: block; transition: transform 0.3s ease;" 
+     onmouseover="this.style.transform='scale(1.05)'" 
+     onmouseout="this.style.transform='scale(1)'">
+    <img src="assets/images/Gemini_Generated_Image_dvxj8kdvxj8kdvxj__1_-removebg-preview.png" alt="Pabbly Official Affiliate" style="width: 60px; height: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border-radius: 8px;">
+  </a>
+  
+  <!-- Floating WhatsApp Link -->
+  <style>
+    @keyframes wa-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    .float-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: wa-pulse 1.5s infinite;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .float-wa:hover {
+      transform: scale(1.1);
+      background-color: #1ebc5a;
+    }
+  </style>
+  <a href="https://api.whatsapp.com/send?phone=916379430293" target="_blank" class="float-wa">
+    <svg viewBox="0 0 32 32" style="width:38px; height:38px; fill: white;">
+      <path d="M16.037 1.874c-8.026 0-14.542 6.516-14.542 14.542 0 2.535.65 4.975 1.884 7.15l-2.072 7.575 7.747-2.036c2.115 1.134 4.475 1.731 6.947 1.731 8.026 0 14.542-6.516 14.542-14.542 0-8.026-6.516-14.542-14.542-14.542zM23.197 22.046c-.307.868-1.521 1.633-2.126 1.701-.568.064-1.289.123-4.103-1.042-3.388-1.401-5.59-4.887-5.759-5.113-.169-.226-1.378-1.836-1.378-3.5 0-1.663.869-2.482 1.182-2.822.313-.339.674-.424.898-.424.225 0 .448.005.644.015.204.011.478-.078.749.569.282.678.966 2.355 1.05 2.525.085.169.141.368.028.594-.112.226-.169.367-.338.565-.169.198-.354.437-.507.594-.17.171-.351.357-.149.696.202.339.897 1.472 1.956 2.392 1.366 1.188 2.476 1.553 2.815 1.722.339.169.537.141.735-.085.197-.226.845-.99 1.071-1.329.226-.339.451-.283.761-.169.311.113 1.957.923 2.296 1.093.339.171.564.254.649.395.085.141.085.819-.222 1.688z"/>
+    </svg>
+  </a>
 </body>
 
 </html>

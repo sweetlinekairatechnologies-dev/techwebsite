@@ -1,0 +1,338 @@
+/* =====================================================
+   PABBLY REDESIGN CSS
+   Styles for Pabbly Billing Pricing & Email Pricing
+   ===================================================== */
+
+/* ── SPACING ── */
+.pricing-spacer {
+  height: 60px;
+}
+
+/* ── HERO BACKGROUND VARIANTS ── */
+.hero-bg-amber {
+  background: #9eeaf9;
+}
+
+.hero-bg-rose {
+  background: #9eeaf9;
+}
+
+.hero-bg-purple {
+  background: #9eeaf9;
+}
+
+/* ── PB CARD WRAPPER ── */
+.pb-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.10);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+  position: relative;
+}
+
+.pb-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.16);
+}
+
+.pb-card.featured {
+  border: 2px solid #006aff;
+  box-shadow: 0 10px 40px rgba(0, 106, 255, 0.15);
+}
+
+/* ── MOST POPULAR BADGE ── */
+.pb-badge {
+  background: #006aff;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.pb-badge i {
+  color: #ffc107;
+  margin: 0 1px;
+}
+
+/* ── CARD TOP SECTION ── */
+.pb-top {
+  background: #fff;
+  padding: 32px 28px 24px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* ── PLAN NAME ── */
+.pb-name {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── ICON CIRCLE ── */
+.pb-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #eafffa;
+  margin: 0 auto 16px;
+  overflow: hidden;
+}
+
+.pb-icon-circle img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* ── HIGHLIGHTS (quick feature pills) ── */
+.pb-highlights {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.pb-hi-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.pb-hi-item.featured-hi {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* ── PRICE BOX ── */
+.pb-price-box {
+  background: #f8f9ff;
+  border: 1px dashed #c8d4ff;
+  border-radius: 12px;
+  padding: 18px 12px;
+  margin: 14px 0 18px;
+  text-align: center;
+}
+
+.pb-old-price {
+  font-size: 0.88rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.pb-price {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  color: #1a1a2e;
+  line-height: 1;
+}
+
+.pb-period {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* ── SUBSCRIBER LINE (Email section) ── */
+.pb-subs {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.pb-subs-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-top: 5px;
+}
+
+/* ── CTA BUTTONS ── */
+.pb-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 13px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, color 0.2s ease;
+  margin-top: 14px;
+  letter-spacing: 0.3px;
+}
+
+.pb-cta--outline {
+  background: transparent;
+  border: 2px solid #006aff;
+  color: #006aff;
+}
+
+.pb-cta--outline:hover {
+  background: #006aff;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.pb-cta--blue {
+  background: #006aff;
+  border: 2px solid #006aff;
+  color: #fff;
+}
+
+.pb-cta--blue:hover {
+  background: #0054d4;
+  border-color: #0054d4;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+/* ── INR PRICE ── */
+.pb-inr {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #006aff;
+  margin-top: 10px;
+}
+
+/* ── FEATURES SECTION ── */
+.pb-features {
+  background: #f5f7ff;
+  padding: 26px 28px 32px;
+  flex: 1;
+}
+
+.pb-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.pb-feat:last-child {
+  margin-bottom: 0;
+}
+
+.pb-feat.off {
+  color: #bbb;
+}
+
+/* ── FEATURE ICONS ── */
+.pb-feat-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.pb-feat-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.8;
+}
+
+.pb-feat-icon.ok svg {
+  stroke: #006aff;
+}
+
+.pb-feat-icon.no svg {
+  stroke: #ef4444;
+}
+
+/* ── TEXT HELPERS ── */
+.hi-text-bold {
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.hi-text-red-ul {
+  color: #ef4444;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* ── EMAIL FEATURES AREA ── */
+.pb-email-features {
+  padding: 20px 25px;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+/* ── SUBSCRIBER DROPDOWN ── */
+.pb-subs-select {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: 1.5px solid #c8d4ff;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  background: #f0f4ff;
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* ── EMAIL PANEL VISIBILITY ── */
+.email-panel {
+  display: none;
+}
+
+.email-panel.active {
+  display: block;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 991px) {
+  .pb-top {
+    padding: 26px 22px 20px;
+  }
+
+  .pb-features {
+    padding: 22px 22px 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-spacer {
+    height: 40px;
+  }
+}

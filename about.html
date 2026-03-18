@@ -275,19 +275,22 @@
     <!-- VISION + MISSION -->
     <div class="vm-wrapper">
         <div class="vm-left">
-            <div class="vm-img-track" id="vmImgTrack">
-                <div class="vm-img-item"><img src="assets/images/121.jpg" alt="Vision" /></div>
-                <div class="vm-img-item"><img src="assets/images/121.jpg" alt="Mission" /></div>
+            <!-- Vision Image (shown first) -->
+            <div class="vm-img-slide" id="vmVisionImg">
+                <img src="assets/images/121.jpg" alt="Our Vision" />
+            </div>
+            <!-- Mission Image (fades in on scroll to mission) -->
+            <div class="vm-img-slide vm-img-slide--hidden" id="vmMissionImg">
+                <img src="assets/images/mission (2).jpg" alt="Our Mission" />
             </div>
         </div>
         <div class="vm-right">
-            <div class="vm-block">
+            <div class="vm-block" id="vmVision">
                 <p class="vm-tag">Our Vision</p>
                 <h2 class="vm-title">The Visionaries<br />Behind the Brands</h2>
-                <p class="vm-desc">To revolutionize the digital landscape by empowering business to build impactful brands, faster meaningful connections, and achieve sustainable growth in the ever-evolving digital world.</p>
+                <p class="vm-desc">To revolutionize the digital landscape by empowering business to build impactful brands, foster meaningful connections, and achieve sustainable growth in the ever-evolving digital world.</p>
                 <div class="vm-cta-row">
                     <a href="pages/contact.html" class="vm-join-btn">Join our Team <span class="vm-btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></span></a>
-                    
                 </div>
             </div>
             <div class="vm-divider"></div>
@@ -303,12 +306,31 @@
     </div>
     <script>
         (function () {
-            const track = document.getElementById('vmImgTrack'), mission = document.getElementById('vmMission');
-            if (!track || !mission) return;
-            let ticking = false;
-            function update() { const rect = mission.getBoundingClientRect(); const winH = window.innerHeight; const progress = Math.min(1, Math.max(0, (winH - rect.top) / winH)); track.style.transform = `translateY(${-progress * 100}vh)`; ticking = false; }
-            window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
-            update();
+            var visionImg  = document.getElementById('vmVisionImg');
+            var missionImg = document.getElementById('vmMissionImg');
+            var missionBlock = document.getElementById('vmMission');
+            if (!visionImg || !missionImg || !missionBlock) return;
+
+            /* Switch to mission image when mission block is ≥40% visible */
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        /* Mission in view — show mission image */
+                        missionImg.classList.remove('vm-img-slide--hidden');
+                        missionImg.classList.add('vm-img-slide--visible');
+                        visionImg.classList.add('vm-img-slide--hidden');
+                        visionImg.classList.remove('vm-img-slide--visible');
+                    } else {
+                        /* Mission out of view — show vision image */
+                        visionImg.classList.remove('vm-img-slide--hidden');
+                        visionImg.classList.add('vm-img-slide--visible');
+                        missionImg.classList.add('vm-img-slide--hidden');
+                        missionImg.classList.remove('vm-img-slide--visible');
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            observer.observe(missionBlock);
         })();
     </script>
 
